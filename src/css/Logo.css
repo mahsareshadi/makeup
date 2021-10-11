@@ -1,0 +1,15 @@
+#img{
+    
+    padding-left: 30px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    background-color: #f7f7f7;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+#makeup-image{
+    width: 200px;
+    height: 60px;
+    
+}

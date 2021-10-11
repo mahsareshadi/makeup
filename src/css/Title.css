@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200;400;500;600;800&display=swap');
+#title{
+    font-family: Gluten;
+    font-weight: 900;
+    font-size: 50px;
+    color: #35201C;
+    padding-left: 94px;
+    padding-top: 67px;
+    padding-bottom: 73px;
+    /* text-align: center; */
+}
+
+#title:hover{
+    color: #6A4139;
+}
