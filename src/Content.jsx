@@ -10,7 +10,7 @@ function Content() {
     const [fileter, setFilter] = useState({});
 
     useEffect(() => {
-        const url = "http://makeup-api.herokuapp.com/api/v1/products.json";
+        const url = "https://makeup-api.herokuapp.com/api/v1/products.json";
 
         const fetchData = async () => {
             try {
