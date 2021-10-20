@@ -8,16 +8,21 @@ import Title from './Title';
 function Content() {
     const [allData, setAllData] = useState([]);
     const [fileter, setFilter] = useState({});
+    const [loading, setLoading] = useState(true);
+
+
 
     useEffect(() => {
         const url = "https://makeup-api.herokuapp.com/api/v1/products.json";
 
         const fetchData = async () => {
+            setLoading(true)
             try {
                 const response = await fetch(url);
                 const json = await response.json();
+                setLoading(false)
                 setAllData(json);
-                console.log(json)
+                // console.log(json)
             } catch (error) {
                 console.log("error", error);
             }
@@ -46,7 +51,17 @@ function Content() {
 
     }
     // console.log(newData)
-
+    if (loading) {
+        return (
+            <>
+                <div id="filter-by-brand">
+                    <Title></Title>
+                    <Filter handleSet={handleSet}></Filter>
+                </div>
+                <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </>
+        )
+    }
     return (
         <div id="content">
             <div id="filter-by-brand">
